@@ -13,7 +13,6 @@
 			margin: 0;
 			padding: 0;
 			font-size: 16px;
-			background-color: #ffffff;
 			background: #e7e7e7 url("img/bg.jpg") repeat;
 		}
 
@@ -52,10 +51,14 @@
 
 		input:focus{
   			outline: none;
+  			color: #cfcfcf;
+		}
+
+		input, button{
+			border-style: none;
 		}
 
 		input[type=text]{
-			border-style: none;
 			width: 300px;
 			padding: 3px;
 			border-radius: 5px 0 0 5px;
@@ -69,7 +72,6 @@
 
 		button{
 			color: #ffffff;
-			border-style: none;
 			padding: 2px 4px;
 			border: 2px solid #8f8f8f;
 			background-color: #181818;
@@ -230,7 +232,6 @@
 
 			.menu .menu-item{
 				border: none;
-				z-index: 1;
 				padding-top: 20px;
 				padding-left: 1px;
 				padding-right: 1px;
@@ -243,10 +244,58 @@
 					background-color: transparent;					
 				}
 				to{
-					top: 10px;
+					top: 20px;
 					background-color: transparent;					
 				}
 			}
+		}
+
+		@media (min-width: 320px) and (max-width: 640px), screen and (orientation: portrait){
+			.image-bar{
+				padding: 0 5px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+			}
+
+			.image-bar .img{
+				width: 50%;
+				height: 25%;
+				margin-top: 7px;
+			}
+
+			.menu{
+				top: 10px;
+				display: flex;
+				width: 50px;
+				position: absolute;
+				flex-direction: column;
+				transition: 1s all;
+				transform: translateY(50px);
+				-webkit-transform: translateY(50px);
+				-webkit-transition: 1s all;
+				animation: topMenu linear 1s;							
+			}
+
+			.menu .menu-item{
+				border: none;
+				padding-top: 20px;
+				padding-left: 1px;
+				padding-right: 1px;
+				padding-bottom: 1px;
+			}
+
+			@keyframes topMenu{
+				from{
+					top: -150px;
+					background-color: transparent;					
+				}
+				to{
+					top: 20px;
+					background-color: transparent;					
+				}
+			}			
 		}
 	</style>
 </head>
@@ -326,45 +375,45 @@
 				</div>
 				<h2>Table</h2>
 				<table>
-						<thead>
-							<tr>
-								<th>Purcus</th>
-								<th>Hantis</th>
-								<th>Mastron</th>
-								<th>Jevicon</th>
-								<th>Language</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Gitsome</td>
-								<td>Some one</td>
-								<td>Take mose</td>
-								<td>Likbes</td>
-								<td>Racounter</td>
-							</tr>
-							<tr>
-								<td>Linkage</td>
-								<td>Fordor</td>
-								<td>Miad ron me</td>
-								<td>Diablo core</td>
-								<td>Tidbade</td>
-							</tr>
-							<tr>
-								<td>Hicura</td>
-								<td>Warecom</td>
-								<td>Xamicon</td>
-								<td>Yamama</td>
-								<td>Udoricano</td>
-							</tr>
-							<tr>
-								<td>Lavistaro</td>
-								<td>Micanorta</td>
-								<td>Ebloconte ma</td>
-								<td>Quad ri port</td>
-								<td>Timesquer</td>
-							</tr>
-						</tbody>
+					<thead>
+						<tr>
+							<th>Purcus</th>
+							<th>Hantis</th>
+							<th>Mastron</th>
+							<th>Jevicon</th>
+							<th>Language</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Gitsome</td>
+							<td>Some one</td>
+							<td>Take mose</td>
+							<td>Likbes</td>
+							<td>Racounter</td>
+						</tr>
+						<tr>
+							<td>Linkage</td>
+							<td>Fordor</td>
+							<td>Miad ron me</td>
+							<td>Diablo core</td>
+							<td>Tidbade</td>
+						</tr>
+						<tr>
+							<td>Hicura</td>
+							<td>Warecom</td>
+							<td>Xamicon</td>
+							<td>Yamama</td>
+							<td>Udoricano</td>
+						</tr>
+						<tr>
+							<td>Lavistaro</td>
+							<td>Micanorta</td>
+							<td>Ebloconte ma</td>
+							<td>Quad ri port</td>
+							<td>Timesquer</td>
+						</tr>
+					</tbody>
 				</table>
 			</div>
 		</div>
